@@ -36,9 +36,10 @@ public class User
 
 
     [NotMapped]
+    [Required(ErrorMessage = "Confirm Password is required.")]
     [DataType(DataType.Password)]
     [Compare("Password")]
-    [Display(Name = "Confirm Password")]
+    [Display(Name = "Confirm Password:")]
     public string Confirm { get; set; }
 }
 
